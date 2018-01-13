@@ -25,6 +25,15 @@
     .hi:hover, .check:checked + .hi {
       transform: translateY(0);
     }
+    /* This fixes an iOS Safari bug. >:( */
+    /* @see https://stackoverflow.com/a/30170745/355325 */
+    /* @see https://stackoverflow.com/a/47818418/355325 */
+    @supports (-webkit-overflow-scrolling: touch) {
+      .hi, .check {
+        display: block;
+        pointer-events: none;
+      }
+    }
   </style>
 </head>
 <body>
