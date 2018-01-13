@@ -17,12 +17,20 @@
       transform: translateY(70vh);
       transition: transform 500ms ease;
     }
-    .hi:hover {
+    .check {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+    .hi:hover, .check:checked + .hi {
       transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <img class="hi" alt="hi" src="hi.jpg" />
+  <label>
+    <input class="check" type="checkbox">
+    <img class="hi" alt="hi" src="hi.jpg">
+  </label>
 </body>
 </html>
